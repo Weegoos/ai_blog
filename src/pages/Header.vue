@@ -17,9 +17,9 @@
         </div>
         <div :class="[$q.screen.width < 600 ? 'mobile-only' : '', 'desktop-only']">
             <q-btn to="/" flat class="text-capitalize">Home</q-btn>
-            <q-btn to="/about" flat class="text-capitalize">News</q-btn>
-            <q-btn flat class="text-capitalize">Podcasts</q-btn>
-            <q-btn flat class="text-capitalize">Resources</q-btn>
+            <q-btn to="/news" flat class="text-capitalize">News</q-btn>
+            <q-btn to="/podcasts" flat class="text-capitalize">Podcasts</q-btn>
+            <q-btn to="/resources" flat class="text-capitalize">Resources</q-btn>
         </div>
         <div :class="[$q.screen.width < 600 ? 'mobile-only' : '', 'desktop-only']">
             <q-btn flat class="text-capitalize contactUsBtn">Contact Us</q-btn>
