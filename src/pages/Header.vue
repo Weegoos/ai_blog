@@ -25,7 +25,7 @@
             <q-btn flat class="text-capitalize contactUsBtn">Contact Us</q-btn>
         </div>
         <div :class="[$q.screen.width < 600 ? 'mobile-only' : 'desktop-hide']">
-            <q-btn flat round dense icon="menu" />
+            <q-btn flat round dense icon="menu" class="menu" />
         </div>
     </q-toolbar>
     </div>
@@ -60,5 +60,9 @@ export default {
 
 .addsText{
   color: $addsColor;
+}
+
+.menu{
+  color: white;
 }
 </style>
