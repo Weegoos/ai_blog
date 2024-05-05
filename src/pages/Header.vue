@@ -25,7 +25,27 @@
             <q-btn flat class="text-capitalize contactUsBtn">Contact Us</q-btn>
         </div>
         <div :class="[$q.screen.width < 600 ? 'mobile-only' : 'desktop-hide']">
-            <q-btn flat round dense icon="menu" class="menu" />
+            <q-btn flat round dense icon="menu" class="menu">
+              <q-menu auto-close>
+          <q-list style="min-width: 100px">
+            <q-item clickable>
+              <q-btn flat no-caps to="/">Home</q-btn >
+            </q-item>
+            <q-item clickable>
+              <q-btn flat no-caps to="/news">News</q-btn >
+            </q-item>
+            <q-item clickable>
+              <q-btn flat no-caps to="/podcasts">Podcasts</q-btn >
+            </q-item>
+            <q-item clickable>
+              <q-btn flat no-caps to="/resources">Resources</q-btn >
+            </q-item>
+            <q-item clickable>
+              <q-btn flat no-caps to="/contact">Contact Us</q-btn >
+            </q-item>
+          </q-list>
+        </q-menu>
+            </q-btn>
         </div>
     </q-toolbar>
     </div>
