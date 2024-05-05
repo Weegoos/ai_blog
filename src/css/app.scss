@@ -1,0 +1,20 @@
+// app global css in SCSS form
+img{
+    object-fit: cover;
+}
+ *,
+ *::after,
+ *::before{
+    padding: 0;
+    margin: 0;
+    border: 0;
+ }
+
+ p{
+    word-break: normal;
+ }
+
+ html, body {
+    height: 100%;
+    margin: 0;
+}
