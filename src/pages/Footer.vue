@@ -1,7 +1,7 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <div class="footerContainer q-pa-sm row">
-    <section :class="[$q.screen.width < 600 ? 'row navleft' : 'col navInline']">
+    <section :class="[$q.screen.width < 600 ? 'row navleft' : 'justify-between row navInline']">
       <div class="col">
       <q-btn class="footerHeadline" no-caps flat label="Home" />
       <div >
@@ -25,7 +25,7 @@
       </div>
     </div>
     </section>
-    <section :class="[$q.screen.width < 600 ? 'row navleft' : 'col']">
+    <section :class="[$q.screen.width < 600 ? 'row navleft' : 'row navInline']">
       <div class="col">
         <q-btn class="footerHeadline" no-caps flat label="Blogs" />
 
@@ -44,7 +44,7 @@
           <q-btn class="footerBtn" no-caps flat label="AI Conversations" />
         </div>
     </section>
-  <section>
+  <section class="">
     <div class="col">
       <q-btn class="footerHeadline" no-caps flat label="Resources" />
       <q-btn class="footerBtn" outline  no-caps flat label="Whitepapers" />
@@ -87,8 +87,9 @@ div{
 
 .navleft{
   width: 400px;
-  border: solid red 1px;
 }
-.navInline div{
+
+.navInline{
+  width: 820px;
 }
 </style>
