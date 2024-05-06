@@ -1,8 +1,8 @@
 <!-- eslint-disable indent -->
 <template>
-  <div class="homePageContainer q-pb-lg vertical-middle">
+  <div class="homePageContainer q-pb-lg vertical-top">
     <q-layout  view="lHh Lpr lFf">
-          <q-toolbar :class="[$q.screen.width < 600 ? 'column' : 'q-pb-lg', 'row']">
+          <q-toolbar :class="[$q.screen.width < 600 ? 'column' : 'q-pb-lg', 'row']" style="align-items: flex-start;">
         <section :class="[$q.screen.width > 600 ? 'column_leftSide col q-mr-lg-auto q-pa-md' : 'column_leftSide_mobile q-pa-sm']">
             <p class="leftSide__intro">Your Journey to Tomorrow Begins Here</p>
             <p class="leftSide__headline">Explore the Frontiers of Artificial Intelligence</p>
@@ -39,18 +39,18 @@
         </section>
     </q-toolbar>
    <div class="overallStats">
-    <q-toolbar :class="[$q.screen.width < 600 ? 'column' : 'q-m-lg', 'row']">
-        <div class="q-pa-md col" :class="[$q.screen.width < 600 ? 'colNews' : 'rowNews']">
+    <q-toolbar class="overallToolbar" :class="[$q.screen.width < 600 ? 'column' : 'q-m-lg', 'row']">
+        <div class="col  q-px-md q-pt-md" :class="[$q.screen.width < 600 ? 'colNews' : 'rowNews']">
             <p class="subcontainerHeadline">Latest News Updates</p>
             <p class="subcontainerDesc">Stay Current</p>
             <p class="subContainerStats">Over 1,000 articles published monthly</p>
         </div>
-        <div class="q-pa-md col" :class="[$q.screen.width < 600 ? 'col colNews' : 'col rowNews']">
+        <div class="col  q-px-md q-pt-md" :class="[$q.screen.width < 600 ? 'col colNews' : 'col rowNews']">
             <p class="subcontainerHeadline">Expert Contributors</p>
             <p class="subcontainerDesc">Trusted Insights</p>
             <p class="subContainerStats">50+ renowned AI experts on our team</p>
         </div>
-        <div class=" q-pa-md col" :class="[$q.screen.width < 600 ? 'col colNews' : 'col rowNews']">
+        <div class=" q-px-md q-pt-md col" :class="[$q.screen.width < 600 ? 'col colNews' : 'col rowNews']">
             <p class="subcontainerHeadline">Global Readership</p>
             <p class="subcontainerDesc">Worldwide Impact</p>
             <p class="subContainerStats">2 million monthly readers</p>
@@ -99,6 +99,7 @@ export default {
     vertical-align: text-top !important;
     overflow-x: hidden;
 }
+
 .col .avatar {
     width: 50px;
     height: 50px;
@@ -164,12 +165,18 @@ export default {
 .overallStats{
     margin-top: 1rem;
 }
+.overallToolbar{
+    align-items: flex-start;
+}
 .overallStats .colNews{
    width: 100%;
    border: #262626 1px solid;
+    display: block;
 }
 .rowNews{
    border: #262626 1px solid;
+    min-height:50px;
+
 }
 
 .subcontainerHeadline{
